@@ -68,3 +68,11 @@ document.querySelector('[href="#schedule"]').onclick = function(e){
   e.preventDefault()
   return false
 }
+
+var _header = document.querySelector('.header-container')
+document.querySelector('.menu-open').onclick = function(){
+  _header.classList.add('open')
+}
+document.querySelector('.menu-close').onclick = function(){
+  _header.classList.remove('open')
+}
