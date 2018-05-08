@@ -76,3 +76,11 @@ document.querySelector('.menu-open').onclick = function(){
 document.querySelector('.menu-close').onclick = function(){
   _header.classList.remove('open')
 }
+
+
+// // set height of panel groups
+// _panels = document.querySelectorAll('.panel')
+// for (var i = _panels.length - 1; i >= 0; i--) {
+//   var panelHeight = _panels[i].clientHeight
+//   // _panels[i].style.height = panelHeight+'px'
+// }

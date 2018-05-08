@@ -285,6 +285,8 @@ header{
 .intro{
   padding: 80px 20px;
   background-image: url(img/codame-invert.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 
   .container{
     max-width: 680px;
@@ -501,6 +503,44 @@ ul{
       padding-left: 15px;
     }
   }  
+}
+
+.panel{
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+
+  .event{
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .time{
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 80px;
+    border-right:6px solid $yellow;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .event-image{
+    border-left:none;
+
+    img{
+      max-width: 120px;
+    }
+  }
+  .panelists{
+    // float: left;
+    padding-left: 100px;
+  }
 }
 
 .speakers{
