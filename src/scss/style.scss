@@ -24,7 +24,7 @@ p a{
   color:$yellow;
 }
 
-h1,h2,h3,h4{
+h1,h2,h3,h4,h5{
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -448,6 +448,13 @@ ul{
   margin-top: 80px;
 }
 
+.workshops{
+
+  .time, .event-title{
+    display: block!important;
+  }
+}
+
 .events{
   display: flex;
   flex-direction: column;
@@ -469,6 +476,7 @@ ul{
   align-items: center;
   margin-bottom: 40px;
   .time{
+    display: none;
 
     font-family: 'Montserrat', sans-serif;
     min-width: 80px;
@@ -502,13 +510,68 @@ ul{
       border-left:6px solid $yellow;
       padding-left: 15px;
     }
-  }  
+  }
+  // .description{
+  //   // display: none;
+
+  // }
+  // .description{
+  //   >a{
+  //     color:#fff;
+  //     border-bottom: 6px solid $yellow;
+  //     display: block;
+  //     margin-bottom: 5px;
+  //   }
+  // }
+  // h5{
+  //   max-width: 440px;
+  //   line-height: 1.3em;
+  //   padding-bottom: 5px;
+  //   text-transform: uppercase;
+  //   font-size: 22px;
+    
+  // }
+
+  // p{
+    .event-title{
+      
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      font-size: 22px;
+      display: block;
+      margin-bottom: 10px;
+      display: none;
+    }
+  // } 
+
 }
 
 .panel{
   align-items: center;
   margin-bottom: 40px;
   position: relative;
+
+  
+
+  .panel-headline{
+    display: none;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    max-width: 550px;
+    line-height: 1.4em;
+  }
+
+  .panel-subtitle{
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .panel-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+  }
 
   .event{
     margin-bottom: 20px;
@@ -518,6 +581,9 @@ ul{
   }
 
   .time{
+
+
+
     height: 100%;
     display: block;
     position: absolute;
@@ -529,17 +595,20 @@ ul{
     margin-right: 10px;
     display: flex;
     align-items: center;
+
+    display: none;
   }
   .event-image{
     border-left:none;
 
     img{
-      max-width: 120px;
+      // max-width: 120px;
     }
   }
   .panelists{
     // float: left;
-    padding-left: 100px;
+    // padding-left: 100px;
+    border-left: 6px solid $yellow;
   }
 }
 

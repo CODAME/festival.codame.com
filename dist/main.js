@@ -45,28 +45,15 @@ document.onmousemove = function(e){
   _radialGradient.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, transparent, rgba(39,34,123,.5))'
 }
 
-document.querySelector('[href="#nightlife"]').onclick = function(e){
-  doScrolling('#nightlife', 1000)
-  e.preventDefault()
-  return false
-}
-
-document.querySelector('[href="#speakers"]').onclick = function(e){
-  doScrolling('#speakers', 1000)
-  e.preventDefault()
-  return false
-}
-
-document.querySelector('[href="#workshops"]').onclick = function(e){
-  doScrolling('#workshops', 1000)
-  e.preventDefault()
-  return false
-}
-
-document.querySelector('[href="#schedule"]').onclick = function(e){
-  doScrolling('#schedule', 1000)
-  e.preventDefault()
-  return false
+// anchor scroll links
+var _anchors = document.querySelectorAll('a[href*="#"]')
+for (var i = _anchors.length - 1; i >= 0; i--) {
+  _anchors[i].onclick = function(e){
+    var section = this.getAttribute('href')
+    doScrolling(section, 1000)
+    e.preventDefault()
+    return false
+  }  
 }
 
 var _header = document.querySelector('.header-container')
