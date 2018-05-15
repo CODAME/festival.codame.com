@@ -309,6 +309,11 @@ header{
       color:#000;
     }
   }
+  .button{
+    color:magenta;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
 }
 
 .content{
@@ -473,6 +478,9 @@ ul{
   }
   >*{
     margin-bottom: 60px;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -480,6 +488,12 @@ ul{
   display: flex;
   align-items: center;
   margin-bottom: 80px;
+
+  @media (max-width: 550px){
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .time{
     // display: none;
     font-size: 14px;
@@ -488,6 +502,11 @@ ul{
     min-width: 80px;
     // border-right:6px solid $yellow;
     // margin-right: 10px;
+    @media (max-width: 550px){
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
   }
   .event-image{
     border-left:6px solid $yellow;
@@ -516,6 +535,7 @@ ul{
       border-left:6px solid $yellow;
       padding-left: 15px;
     }
+
   }
   // .description{
   //   // display: none;
@@ -577,13 +597,27 @@ ul{
 
   
 
+  
+
+  
+
   .panel-intro{
     padding-left: 15px;
     margin-bottom: 40px;
     max-width: 550px;
     line-height: 1.4em;
+    @media (max-width: 550px){
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
     p{
       font-size: 14px;
+      @media (max-width: 550px){
+        padding-left: 15px;
+        border-left:6px solid $yellow;
+        padding-bottom: 40px;
+      }
     }
   }
 
@@ -607,8 +641,21 @@ ul{
 
   .event{
     margin-bottom: 20px;
+    @media (max-width: 550px){
+      padding-left: 15px;
+      border-left:6px solid $yellow;
+      padding-bottom: 20px;
+      margin-bottom: 0;
+    }
+
     &:last-child{
       margin-bottom: 0;
+    }
+    p{
+      border-left:none;
+      @media (max-width: 550px){
+        padding-left: 0;
+      }
     }
   }
 
@@ -625,6 +672,14 @@ ul{
     margin-right: 10px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 550px){
+      position: relative;
+      height: auto;
+      border:0;
+      margin-bottom: 10px;
+      left: 0;
+    }
   }
   .event-image{
     border-left:none;
@@ -637,6 +692,9 @@ ul{
     // float: left;
     padding-left: 90px;
     // border-left: 6px solid $yellow;
+    @media (max-width: 550px){
+      padding-left: 0;
+    }
   }
 }
 
@@ -644,6 +702,8 @@ ul{
   .container>p{
     max-width: 480px;
     margin-bottom: 1em;
+    font-size: 14px;
+    line-height: 1.3em;
   }
   h4{
     margin-bottom: 40px;
@@ -718,10 +778,16 @@ ul{
   }
   ul{
     margin-bottom: 1em;
+    font-size: 14px;
+    line-height: 1.3em;
   }
   a{
     border-bottom: 0;
     color:$yellow;
     margin-bottom: 0;
+  }
+  p{
+    font-size: 14px;
+    line-height: 1.3em;
   }
 }
