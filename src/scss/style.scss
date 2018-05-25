@@ -365,6 +365,9 @@ header{
 
 h2{
   font-size: 48px;
+  @media (max-width: 580px){
+    font-size: 24px;
+  }
 }
 
 h3{
@@ -507,7 +510,7 @@ ul{
   align-items: center;
   margin-bottom: 80px;
 
-  @media (max-width: 550px){
+  @media (max-width: 700px){
     flex-direction: column;
     align-items: flex-start;
   }
@@ -628,7 +631,6 @@ ul{
 }
 
 .panel{
-  align-items: center;
   margin-bottom: 80px;
   position: relative;
 
@@ -643,18 +645,12 @@ ul{
     margin-bottom: 40px;
     max-width: 550px;
     line-height: 1.4em;
-    @media (max-width: 550px){
+    @media (max-width: 700px){
       padding-left: 0;
-      margin-bottom: 0;
     }
 
     p{
       font-size: 14px;
-      @media (max-width: 550px){
-        padding-left: 15px;
-        border-left:6px solid $yellow;
-        padding-bottom: 40px;
-      }
     }
   }
 
@@ -710,13 +706,14 @@ ul{
     display: flex;
     align-items: center;
 
-    @media (max-width: 550px){
+    @media (max-width: 700px){
       position: relative;
       height: auto;
       border:0;
       margin-bottom: 10px;
       left: 0;
     }
+
   }
   .event-image{
     border-left:none;
@@ -729,8 +726,24 @@ ul{
     // float: left;
     padding-left: 90px;
     // border-left: 6px solid $yellow;
-    @media (max-width: 550px){
+    @media (max-width: 700px){
       padding-left: 0;
+    }
+
+    .event{
+      @media (max-width: 700px){
+        border-left: 6px solid $yellow;
+        padding-left: 15px;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      p{
+        @media (max-width: 700px){
+          padding-left: 0;
+        }
+      }
     }
   }
 }
